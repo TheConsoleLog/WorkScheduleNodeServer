@@ -1,0 +1,85 @@
+/** {
+  color: #E2DCC8;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  background-color: #100F0F;
+}
+
+.nonactive > input {
+  color: gray;
+  background-color: #0F3D3E;
+}
+
+.active > input {
+  border: 2px solid orchid;
+}
+
+input {
+  font-size: 1.6rem;
+  margin: 10px;
+  padding: 25px;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 30px;
+}
+
+main {
+  width: 300px;
+  margin: auto;
+}
+
+input[type=text] {
+  margin: auto;
+  border: 2px solid orchid;
+  padding: 40px;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+  color: #E2DCC8;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #100F0F;
+}
+
+.nonactive > input {
+  color: gray;
+  background-color: #0F3D3E;
+}
+
+.active > input {
+  border: 2px solid orchid;
+}
+
+h1 {
+  font-family: 'Black Ops One', cursive, monospace, Courier;
+  font-size: 3.5rem;
+}
+h2 {
+  font-family: 'Black Ops One', monospace, Courier;
+  font-size: 2rem;
+}
+input {
+  border: none;
+  padding: 10px 30px 10px 30px;
+  margin: 20px;
+  border-radius: 30px;
+}
+#remark {
+  border: 2px solid #0F3D3E;
+}
+.days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+form {
+  flex-grow: 1;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}

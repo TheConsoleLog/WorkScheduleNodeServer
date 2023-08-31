@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+  color: #E2DCC8;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #100F0F;
+}
+h1 {
+  font-family: 'Black Ops One', cursive, monospace, Courier;
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+}
+input {
+  border: 2px solid orchid;
+  padding: 10px 30px 10px 30px;
+  margin: 3px 10px 3px 10px;
+  border-radius: 30px;
+}
+input[type="submit"] {
+  margin-top: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  align-content: space-between;
+  gap: 100px;
+}
+.container > form {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+}
+.container > .info {
+  display: flex;
+  flex: 50%;
+  text-align: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-family: monospace, 'Courier New', Courier;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
