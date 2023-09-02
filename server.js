@@ -5,9 +5,12 @@ const path = require('path')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const sessionStorage = require('connect-mongodb-session')(session)
+const helmet = require('helmet')
+const cors = require('cors')
 const server = express()
 
 const authRoute = require('./routes/authRoute')
+const { setServers } = require('dns')
 
 const store = new sessionStorage({
   uri: process.env.MONGOOSE_URI,
@@ -15,6 +18,7 @@ const store = new sessionStorage({
 })
 
 server.use(bodyParser.urlencoded({ extended: true }))
+server.use(cors())
 server.use(
   session({
     secret: 'my secret',
@@ -27,6 +31,7 @@ server.use(
   })
 );
 server.use(express.static(path.join(__dirname, 'public')))
+server.use(helmet({   contentSecurityPolicy: false }))
 server.use(authRoute)
 server.set('view engine', 'ejs')
 server.set('views', 'views')

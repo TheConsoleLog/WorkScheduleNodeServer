@@ -23,7 +23,9 @@
       <% }) %>
     </div>
     <form action="/save-remark" method="POST">
-      <input type="text" name="remark" id="remark" value="<%= remark %>">
+      <textarea id="remark" name="remark">
+        <%= remark %>
+      </textarea>
       <input type="submit" name="submit" value="save remark">
     </form>
   </main>
