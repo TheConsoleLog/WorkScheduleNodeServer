@@ -6,17 +6,14 @@
   letter-spacing: 2px;
   background-color: #100F0F;
 }
-
 .nonactive > input {
   color: gray;
   background-color: #0F3D3E;
   border: 2px solid #0F3D3E;
 }
-
 .active > input {
   border: 2px solid orchid;
 }
-
 h1 {
   font-family: 'Black Ops One', cursive, monospace, Courier;
   font-size: min(max(60px, 7vw), 90px);
@@ -32,9 +29,6 @@ input, #remark {
   padding: 10px 30px 10px 30px;
   border-radius: 30px;
 }
-#remark {
-  border: 2px solid #0F3D3E;
-}
 .days {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -49,9 +43,29 @@ form {
   align-items: center;
 }
 #remark {
+  border: 2px solid #0F3D3E;
   margin: 20px 10px;
   overflow: hidden;
   resize: none;
   text-align: center;
   width: 100%;
+}
+.input-save-remark, .input-logout{
+  margin: 0;
+  padding: 10px;
+}
+.save-remark, .logout {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: -10px;
+  margin: 20px 10px;
+}
+.logout {
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  right: 1rem;
+  margin-top: 20px;
 }

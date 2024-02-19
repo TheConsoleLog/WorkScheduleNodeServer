@@ -21,18 +21,19 @@ input[type="submit"] {
   margin-top: 20px;
 }
 .container {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   margin: auto;
   justify-content: space-between;
   align-content: space-between;
   gap: 100px;
 }
-.container > form {
+form {
   display: flex;
   flex-direction: column;
   flex: 50%;
+  width: min(max(450px, 5vw), 350px);;
+  margin: auto;
 }
 .container > .info {
   display: flex;
@@ -42,7 +43,6 @@ input[type="submit"] {
   font-size: 1.2em;
   font-family: monospace, 'Courier New', Courier;
 }
-
 .info {
   display: flex;
   flex-direction: column;

@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timetable</title>
   <link rel="stylesheet" href="/css/timetable.css">
+  <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
-  <h1>Timetable</h1>
+  <h1>Dienstplan</h1>
   <h2><%= type %></h2>
   <main>
     <div class="days">
@@ -23,11 +24,22 @@
       <% }) %>
     </div>
     <form action="/save-remark" method="POST">
-      <textarea id="remark" name="remark">
-        <%= remark %>
-      </textarea>
-      <input type="submit" name="submit" value="save remark">
+      <input type="text" name="remark" id="remark" value="<%= remark %>" placeholder="remark">
+      <span class="save-remark">
+        <input type="submit" name="submit" value="save remark" class="input-save-remark">
+        <ion-icon name="bookmark-outline"></ion-icon>
+      </span>
     </form>
+    <div class="logout">
+      <form action="/logout" method="get">
+        <span class="logout">
+          <input type="submit" value="Logout" class="input-logout">
+          <ion-icon name="log-out-outline"></ion-icon>
+        </span>
+      </form>
+    </div>
   </main>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -126,12 +126,12 @@ Router.get('/timetable', isAuth, async(req, res, next) => {
         days: [...days]
       }
 
-      user.timetables = [ timetable ]
+      user.timetables = [ timetable, ...user.timetables ]
 
       await user.save()
 
       return res.render('timetable.ejs', {
-        type: 'Weekly',
+        type: 'Aktuell',
         days,
         remark: user.timetables[timetableIndex].remark
       })
@@ -143,7 +143,7 @@ Router.get('/timetable', isAuth, async(req, res, next) => {
       const days = user.timetables[timetableIndex].days
 
       return res.render('timetable.ejs', {
-        type: 'Weekly',
+        type: 'Aktuell',
         days,
         remark: user.timetables[timetableIndex].remark
       })
